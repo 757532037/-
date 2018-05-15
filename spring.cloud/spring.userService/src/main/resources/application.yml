@@ -1,0 +1,19 @@
+server:
+  port: 8084 
+spring:
+  application:
+    name: spring-userService
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
+hystrix: 
+  command: 
+    default: 
+      execution: 
+        isolation: 
+          thread: 
+            timeoutInMilliseconds: 6000     
+health:
+  config:
+    enabled: false    
